@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lia | Games</title>
+  <link rel="stylesheet" href="games.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">
+        <img src="LOGO Lia-1.png" alt="Lia Logo" class="lia-logo" />
+    </a>
+    <h1>Lia</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="login.html">Login</a></li>
+      
+
+    </ul>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+  </nav>
+
+  <section class="games-section">
+    <h2>🎮 Play & Learn with Lia</h2>
+
+    <div class="games-grid">
+      <!-- Repeatable Game Card -->
+       <!-- game 1  -->
+      <div class="game-card">
+        <img src="istockphoto-1186386668-612x612.jpg" alt="Game 1">
+        <div class="game-info">
+          <h3>Logic Puzzle</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 1')">Play Now</button>
+            <button onclick="openModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">🎥 Watch Video</button>
+
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+ <!-- game 2  -->
+      <div class="game-card">
+        <img src="BLOG_GW_ENG-12-920x481.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 3   -->
+      <div class="game-card">
+        <img src="Screenshot 2025-04-10 110131.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 4  -->
+      <div class="game-card">
+        <img src="Screenshot 2025-04-10 110716.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 5  -->
+      <div class="game-card">
+        <img src="game 5 main.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 6  -->
+      <div class="game-card">
+        <img src="game 6 main.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 7  -->
+      <div class="game-card">
+        <img src="game 7 main.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+       <!-- game 8  -->
+      <div class="game-card">
+        <img src="game 8 main.jpg" alt="Game 2">
+        <div class="game-info">
+          <h3>Quick Quiz</h3>
+          <div class="game-buttons">
+            <button onclick="alert('Launching Game 2')">Play Now</button>
+            <button onclick="alert('Opening Video...')">🎥 Watch Video</button>
+            <button onclick="alert('Please Login First')">🔐 Login</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add 8 more game cards similarly -->
+      <!-- ... -->
+    </div>
+  </section>
+
+  <script src="games.js"></script>
+  <!-- Modal for Video -->
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+

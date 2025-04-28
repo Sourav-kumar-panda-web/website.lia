@@ -1,0 +1,445 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+nav {
+  background: #098a8f;
+  color: rgb(235, 216, 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e85d04;
+}
+
+.lia-logo {
+  height: 40px;
+}
+
+#darkModeToggle {
+  background: #e85d04;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#darkModeToggle:hover {
+  background: #cc4c03;
+}
+
+/* Hero Video */
+.hero-fullscreen video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.fixed {
+  flex-shrink: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.left {
+  width: 150px;
+}
+
+.right {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right button {
+  background: #03dac5;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.scrolling-wrapper {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex-grow: 1;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.game-card {
+  position: relative;
+  width: 150px;
+  flex-shrink: 0;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.start-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: none;
+  background-color: #e85d04;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.game-card:hover .start-btn {
+  display: block;
+}
+/* Info Boxes */
+.info-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  background: #fff;
+  gap: 1.5rem;
+}
+
+.info-box {
+  background: #f0f0f0;
+  padding: 1.5rem;
+  border-left: 6px solid #e85d04;
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Progress Tracker */
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.progress-container::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ccc;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.progress {
+  position: absolute;
+  height: 4px;
+  background: #e85d04;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transition: width 0.4s ease;
+}
+
+.circle {
+  background: rgb(163, 163, 163);
+  border: 50px solid #789dbb;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.circle.active {
+  border-color: #cabe11;
+  color: #eb0d0d;
+}
+
+.buttons button {
+  background: #e85d04;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.buttons button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.buttons button:hover:not(:disabled) {
+  background: #cc4c03;
+}
+
+/* Testimonials */
+.testimonial-section {
+  padding: 3rem 1rem;
+  background: #fff7f0;
+  text-align: center;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background: white;
+  padding: 1.5rem;
+  border-left: 5px solid #e85d04;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  padding: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  color: #e85d04;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ccc;
+  display: block;
+  margin: 0.5rem 0;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-bottom .socials img {
+  width: 24px;
+  margin: 0 8px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.footer-bottom .socials img:hover {
+  transform: scale(1.2);
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav {
+  background: #1f1f1f;
+}
+
+body.dark-mode nav a {
+  color: #f0f0f0;
+}
+
+body.dark-mode nav a:hover {
+  color: #e85d04;
+}
+
+body.dark-mode .info-box {
+  background: #1c1c1c;
+  color: #f0f0f0;
+  border-left-color: #e85d04;
+}
+
+body.dark-mode .testimonial-section {
+  background: #181818;
+}
+
+body.dark-mode .testimonial {
+  background: #252525;
+  color: #eaeaea;
+}
+
+body.dark-mode .progress-container::before {
+  background: #444;
+}
+
+body.dark-mode .circle {
+  background: #1f1f1f;
+  border-color: #666;
+  color: #eee;
+}
+
+body.dark-mode .circle.active {
+  border-color: #e85d04;
+  color: #e85d04;
+}
+
+body.dark-mode .footer {
+  background: #1a1a1a;
+  color: #ddd;
+}
+
+body.dark-mode .footer-column h4 {
+  color: #e85d04;
+}
+
+body.dark-mode .footer-column ul li a {
+  color: #bbb;
+}
+
+body.dark-mode .footer-column ul li a:hover {
+  color: #fff;
+}
+
+body.dark-mode .carousel-item img {
+  filter: brightness(0.9);
+}
+.footer-bottom {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #03dac5;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.social-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.social-btn:hover {
+  background: #00bfa5;
+  transform: scale(1.05);
+}
+
+.referral-btn {
+  background: linear-gradient(45deg, #ff6f00, #ff9100);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.4s, transform 0.3s;
+}
+
+.referral-btn:hover {
+  background: linear-gradient(45deg, #ff9100, #ff6f00);
+  transform: scale(1.1);
+}

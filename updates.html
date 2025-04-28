@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIA Game Ideas</title>
+  <link rel="stylesheet" href="updates.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">
+          <img src="LOGO Lia-1.png" alt="Lia Logo" class="lia-logo" />
+        </a>
+        <!-- <h1>Lia</h1> -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="updates.html">Updates</a></li>
+        </ul>
+        <button id="darkModeToggle">🌙 </button>
+      </nav>
+<h1>Interactive Learning Games</h1>
+<div class="game-container">
+    <div class="game-card fancy">
+        <div class="icon">🧠</div>
+        <h3>Brain Builder</h3>
+        <p>Train memory and logic with interactive puzzles!</p>
+        <button class="start-btn">Start</button>
+      </div>    
+    <div class="game-card">
+        <div class="game-title">Quiz Quest: Level Up</div>
+        <div class="game-description">Unlock quiz levels and master topics.</div>
+        <div class="game-details">
+          AI generates custom questions. Use hints, beat the timer, and earn badges!
+        </div>
+        <a href="https://lia-edu.in/en/games/interactive/class/class-3-3/social-studies-59/state-and-capitals-of-india-334/states-and-capitals-north-india-687"><button class="start-btn" onclick="startGame('quiz')">Start Game</button></a>
+        <button class="start-btn"onclick="startGame('quiz')">show video </button>
+      </div>
+      
+      <div class="game-card">
+        <div class="game-title">Brain Builder Puzzles</div>
+        <div class="game-description">Challenge your brain with logic and memory games.</div>
+        <div class="game-details">
+          Adaptive AI puzzles. Train memory, math, and logic with growing difficulty.
+        </div>
+        <button class="start-btn" onclick="startGame('puzzle')">Start Game</button>
+        <button class="start-btn" onclick="startGame('puzzle')">Show video </button>
+      </div>
+      
+      <div class="game-card">
+        <div class="game-title">Story Solver</div>
+        <div class="game-description">Make choices and solve story-based challenges.</div>
+        <div class="game-details">
+          Read & solve mysteries. AI explains questions and guides your journey.
+        </div>
+        <button class="start-btn" onclick="startGame('story')">Start Game</button>
+        <button class="start-btn" onclick="startGame('story')">Show video</button>
+      </div>      
+</div>
+<script src="Updates.js"></script>
+</body>
+</html>

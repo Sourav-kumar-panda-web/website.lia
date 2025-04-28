@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lia | Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html">
+        <img src="LOGO Lia-1.png" alt="Lia Logo" class="lia-logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery">Gallery</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="updates.html">updates</a></li>
+
+    </ul>
+    <button class="toggle-btn" onclick="toggleTheme()">🌙</button>
+  </nav>
+
+  <!-- Image Gallery -->
+  <section class="interactive-gallery" id="gallery">
+    <h2>📸 Explore Lia in Action</h2>
+    <div class="image-grid">
+      
+      <div class="image-card" onclick="toggleDescription(this)">
+        <img src="istockphoto-1186386668-612x612.jpg" alt="Classroom">
+        <div class="resolution">500x350</div>
+        <div class="description">
+          <p>This is a smart AI-enabled classroom experience where students interact in real time with Lia.</p>
+        </div>
+      </div>
+
+      <div class="image-card" onclick="toggleDescription(this)">
+        <img src="https://source.unsplash.com/500x400/?learning" alt="Learning">
+        <div class="resolution">500x400</div>
+        <div class="description">
+          <p>Students exploring self-paced learning modules in Lia's interactive platform.</p>
+        </div>
+      </div>
+
+      <div class="image-card" onclick="toggleDescription(this)">
+        <img src="https://source.unsplash.com/500x375/?technology,ai" alt="AI Tech">
+        <div class="resolution">500x375</div>
+        <div class="description">
+          <p>Lia's AI technology personalizes the learning experience using real-time assistance.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    // Function to load the navbar into each page
+    window.onload = function() {
+        const navbarContainer = document.getElementById('navbar-container');
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                navbarContainer.innerHTML = data;
+            });
+    };
+</script>
+  <script src="gallery.js"></script>
+</body>
+</html>
+

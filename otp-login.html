@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lia OTP Login</title>
+</head>
+<body>
+  <!-- nav bar -->
+  <nav>
+    <a href="index.html">
+        <img src="LOGO Lia-1.png" alt="Lia Logo" class="lia-logo" />
+    </a>
+    <h1>Lia</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="updates.html">updates</a></li>
+
+    </ul>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+  </nav>
+  <style>
+         
+  nav {
+    width: 100%;
+    background: #111;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav h1 {
+    color: #fff;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  </style>
+  <h2>Login with Phone Number</h2>
+  <input type="text" id="phone" placeholder="Enter phone number e.g. +917077544483" />
+  <button onclick="sendOTP()">Send OTP</button>
+
+  <h3>Verify OTP</h3>
+  <input type="text" id="otp" placeholder="Enter OTP" />
+  <button onclick="verifyOTP()">Verify OTP</button>
+
+  <script>
+    async function sendOTP() {
+      const phone = document.getElementById('phone').value;
+      const res = await fetch('http://localhost:3000/send-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone })
+      });
+      const data = await res.json();
+      alert(data.message);
+    }
+
+    async function verifyOTP() {
+      const phone = document.getElementById('phone').value;
+      const otp = document.getElementById('otp').value;
+      const res = await fetch('http://localhost:3000/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone, otp })
+      });
+      const data = await res.json();
+      alert(data.message);
+    }
+  </script>
+</body>
+</html>

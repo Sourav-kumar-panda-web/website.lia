@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses - Lia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   <!-- Navbar -->
+<nav>
+    <a href="index.html">
+        <img src="LOGO Lia-1.png" alt="Lia Logo" class="lia-logo" />
+    </a>
+    <h1>Lia</h1>
+    
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="login.html">Login</a></li>
+
+    </ul>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙</button>
+    <!-- Logo image -->
+</nav>
+
+
+  <main>
+    <h2>Available Courses</h2>
+    <div id="course-container" class="course-grid"></div>
+  </main>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h3 id="popup-title"></h3>
+      <p id="popup-description"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
